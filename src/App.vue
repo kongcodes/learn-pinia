@@ -4,6 +4,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Count from './components/Count.vue'
 import CountButton from './components/CountButton.vue'
+import UserList from './components/UserList.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import CountButton from './components/CountButton.vue'
   <!-- <HelloWorld msg="Vite + Vue" /> -->
   <Count></Count>
   <CountButton></CountButton>
+  <UserList></UserList>
 </template>
 
 <style scoped>
