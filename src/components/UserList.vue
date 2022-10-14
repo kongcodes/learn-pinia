@@ -1,12 +1,12 @@
 <script setup lang="ts">
-  import { mainStore } from '../store/index'
-  const store = mainStore()
+  import { useUserStore } from '../store/user'
+  const userStore = useUserStore()
 </script>
   
 <template>
-  <h3>UserList</h3>
+  <h3>当前有 {{userStore.userNum}} 个用户 </h3>
   <ul>
-    <li v-for="item in store.userList">{{ item }}</li>
+    <li v-for="item in userStore.userList">{{ item }}</li>
   </ul>
 </template>
   

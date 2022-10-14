@@ -5,7 +5,7 @@ export const mainStore = defineStore('main', {
     return {
       count: 0,
       text: '文字',
-      userList: Array<String>()
+      userList: <string[]>[]
     }
   },
   getters: {

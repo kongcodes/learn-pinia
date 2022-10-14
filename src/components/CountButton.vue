@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import { mainStore } from '../store/index'
+  import { useUserStore } from '../store/user'
   const store = mainStore()
+  const userStore = useUserStore()
 
   function handleDoubleCount() {
     console.log(store.doubleCount)
@@ -28,6 +30,13 @@
       }
     })
   }
+  // setup stores
+ function handleAddUser() {
+    userStore.addUser('用户')
+  }
+  function handleResetUser() {
+    userStore.resetUser()
+  }
 </script>
   
 <template>
@@ -36,12 +45,15 @@
   <button @click="handleAddAction">调用action</button>
   <button @click="handlePatch1">$patch修改值</button>
   <button @click="handlePatch2">$patch接收函数</button>
+  <br/>
+  <button @click="handleAddUser">添加用户</button>
+  <button @click="handleResetUser">清空用户</button>
 </template>
   
 <style scoped>
 button {
   display: inline-block;
-  margin: 0 5px;
+  margin: 15px 5px;
 }
 </style>
   
